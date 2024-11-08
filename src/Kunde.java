@@ -25,5 +25,12 @@ public class Kunde {
 
     }
 
+     public void bestellungErstellen(Bestellung bestellung) {
+        bestellungen.add(bestellung);
+    }
+
+        public void produktHinzufuegen(Produkt produkt, int menge) {
+        warenkorb.produktHinzufuegen(produkt, menge);
+    }
 
 }

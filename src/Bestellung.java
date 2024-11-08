@@ -23,11 +23,13 @@ public class Bestellung {
         return produkte;
     }
 
-    public void addProdukt(Produkt produkt) {
+    public void produktHinzufuegen(Produkt produkt) {
         produkte.add(produkt);
     }
 
-
     public void aufgeben() {}
+
+
+
 
 }

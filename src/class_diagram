@@ -1,0 +1,27 @@
+classDiagram
+    %% Einfache E-Commerce-Anwendung
+
+    class Kunde {
+        +String name
+        +void anmelden()
+    }
+
+    class Bestellung {
+        +String bestellnummer
+        +void aufgeben()
+    }
+
+    class Produkt {
+        +String name
+        +double preis
+    }
+
+    class Warenkorb {
+        +int menge
+        +double gesamtpreisBerechnen()
+    }
+
+    Kunde "1" --> "1.." Bestellung : erstellt
+    Kunde "1" --> "1" Warenkorb : besitzt
+    Bestellung "1" --> "1.." Produkt : enthält
+    Warenkorb "1" --> "1..*" Produkt : enthält

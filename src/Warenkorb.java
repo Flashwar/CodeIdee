@@ -10,7 +10,10 @@ public class Warenkorb {
         this.produkte = new ArrayList<Produkt>();
     }
 
-
+     public void produktHinzufuegen(Produkt produkt, int menge) {
+         produkte.add(produkt);
+         menge++;
+     }
 
     public double gesamtpreisBerechnen(){return menge;}
 
@@ -21,4 +24,7 @@ public class Warenkorb {
     public void setMenge(int menge) {
         this.menge = menge;
     }
+
+
+
 }

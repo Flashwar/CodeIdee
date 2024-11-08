@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant Kunde
+    participant Warenkorb
+    participant Produkt
+    participant Bestellung
+
+    Kunde->>Kunde: anmelden()
+    Kunde->>Warenkorb: Produkt hinzufügen()
+    Kunde->>Bestellung: aufgeben()
+    Bestellung->>Produkt: Produkte hinzufügen
