@@ -1,32 +1,24 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Kunde {
 
-    public String name;
-    public Warenkorb warenkorb;
-    public List<Bestellung> bestellungen;
+    private  boolean istHungrig;
 
-    public Kunde(String name) {
-        this.name = name;
-        this.warenkorb = new Warenkorb();
-        this.bestellungen = new ArrayList<>();
+    public Kunde(boolean istHungrig) {
+        this.istHungrig = istHungrig;
     }
 
-    public String getName() {
-        return name;
+    public boolean isIstHungrig() {
+        return istHungrig;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setIstHungrig(boolean istHungrig) {
+        this.istHungrig = istHungrig;
     }
 
-    public void anmelden(){
-
+    public boolean antwort_geben(){
     }
 
-     public void bestellungErstellen(Bestellung bestellung) {
-        bestellungen.add(bestellung);
+    public Pommes bestellen(Mitarbeiter mitarbeiter){
+
     }
 
 }

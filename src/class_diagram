@@ -1,5 +1,6 @@
 classDiagram
     class Kunde {
+        -istHungrig: bool
         +bestellen(mitarbeiter: Mitarbeiter): Pommes
         +antwort_geben(): bool
     }
