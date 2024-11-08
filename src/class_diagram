@@ -1,29 +1,17 @@
 classDiagram
-    %% Einfache E-Commerce-Anwendung
-
     class Kunde {
-        +String name
-        +void anmelden()
-        +void bestellungErstellen(Bestellung bestellung)
+        +bestellen(mitarbeiter: Mitarbeiter): Pommes
+        +antwort_geben(): bool
     }
 
-    class Bestellung {
-        +String bestellnummer
-        +void aufgeben()
+    class Mitarbeiter {
+        +mayo_fragen(kunde: Kunde): bool
+        +pommes_vorbereiten(): Pommes
     }
 
-    class Produkt {
-        +String name
-        +double preis
+    class Pommes {
+        +vorbereiten(): void
     }
 
-    class Warenkorb {
-        +int menge
-        +void produktHinzufuegen(Produkt produkt, int menge)
-        +double gesamtpreisBerechnen()
-    }
-
-    Kunde "1" --> "1.." Bestellung : erstellt
-    Kunde "1" --> "1" Warenkorb : besitzt
-    Bestellung "1" --> "1.." Produkt : enthält
-    Warenkorb "1" --> "1..*" Produkt : enthält
+    Kunde --> Mitarbeiter : "interagiert mit"
+    Mitarbeiter --> Pommes : "bereitet vor"

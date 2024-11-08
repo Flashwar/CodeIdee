@@ -1,10 +1,11 @@
 sequenceDiagram
     participant Kunde
-    participant Warenkorb
-    participant Produkt
-    participant Bestellung
+    participant Mitarbeiter
+    participant Pommes
 
-    Kunde->>Kunde: anmelden()
-    Kunde->>Warenkorb: produktHinzufuegen()
-    Kunde->>Bestellung: aufgeben()
-    Bestellung->>Produkt: produktHinzufuegen()
+    Kunde->>Mitarbeiter: bestellen()
+    Mitarbeiter->>Kunde: mayo_fragen()
+    Kunde->>Mitarbeiter: true
+    Mitarbeiter->>Pommes: pommes_vorbereiten()
+    Pommes ->> Mitarbeiter: pommes
+    Mitarbeiter->>Kunde: pommes
