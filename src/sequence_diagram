@@ -5,6 +5,6 @@ sequenceDiagram
     participant Bestellung
 
     Kunde->>Kunde: anmelden()
-    Kunde->>Warenkorb: Produkt hinzufügen()
+    Kunde->>Warenkorb: produktHinzufuegen()
     Kunde->>Bestellung: aufgeben()
-    Bestellung->>Produkt: Produkte hinzufügen
+    Bestellung->>Produkt: produktHinzufuegen()

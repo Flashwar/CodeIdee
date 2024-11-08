@@ -4,6 +4,7 @@ classDiagram
     class Kunde {
         +String name
         +void anmelden()
+        +void bestellungErstellen(Bestellung bestellung)
     }
 
     class Bestellung {
@@ -18,6 +19,7 @@ classDiagram
 
     class Warenkorb {
         +int menge
+        +void produktHinzufuegen(Produkt produkt, int menge)
         +double gesamtpreisBerechnen()
     }
 
